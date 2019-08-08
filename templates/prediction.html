@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/prediction.css">
+    </head>
+    <body>
+        <h1>Please type data or upload a file:</h1>
+        <p>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+            {% endwith %}
+        </p>
+        <form method="POST" action="{{ url_for('display_result') }}" enctype="multipart/form-data">
+            <div class="center">
+
+                <textarea id="data" name="data" cols="100" rows="50"></textarea>
+                <br/>
+                <div class="buttons">
+                    <input class="file" type="file" id="file_u" name="file_u" value="Upload a file to predict" requiered>
+                    <input type="submit" name="prediction" value="Predict text">
+                    <input class="predict" type="submit" name="prediction_file" value="Predict file">
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
+
