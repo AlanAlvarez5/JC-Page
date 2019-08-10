@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/static/prediction.css">
+        <link rel="stylesheet" type="text/css" href="../../static/prediction.css">
     </head>
     <body>
         <header>
-                <img src="/static/inegi.jpg" alt="logo_inegi">
-                <img src="/static/conacyt.png" alt="conacyt_logo">
-                <img src="/static/ug.png" alt="ug_logo">
+                <img src="../../static/inegi.jpg" alt="logo_inegi">
+                <img src="../../static/conacyt.png" alt="conacyt_logo">
+                <img src="../../static/ug.png" alt="ug_logo">
         </header>
-
-        <!-- Primer tarjeta "Ingrese texto o seleccione un archivo" -->
-        <div>
+        <div class="sections">
+            <!-- Primer tarjeta "Ingrese texto o seleccione un archivo" -->
+        <div class="left-div">
             <h1>Ingrese Texto o Seleccione un Archivo</h1>
             <!-- <p>
                     {% with messages = get_flashed_messages() %}
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Segunda tarjeta Resultados -->
-        <div>
+        <div class="right-div">
             <h1>Predicciones</h1>
             <div>
                 <div>
@@ -57,5 +57,6 @@
                 </div>
             </div>
         </div>   
+        </div>
     </body>
 </html>

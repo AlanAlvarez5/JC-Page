@@ -1,4 +1,37 @@
 body {
     margin: 0;
-    background-image: linear-gradient(white, #00569B)
+    background-image: linear-gradient(white, #00569B);
+    font-family: sans-serif;
+    padding: 2rem;
+}
+
+header {
+    padding: 2rem;
+}
+
+header img {
+    height: 5rem;
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.left-div {
+    background-color: #0A4677;
+    border-radius: 1.5rem;
+    color: white;
+}
+
+textarea {
+    width: 80%;
+    box-align: center;
+
+}
+
+.right-div {
+    border-radius: 1.5rem;
+    background-color: white;
 }
