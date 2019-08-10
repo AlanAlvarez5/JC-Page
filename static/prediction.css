@@ -53,6 +53,7 @@ textarea {
 .buttons-container {
     margin-bottom: 0;
     padding-bottom: 0;
+    width: 100%
 }
 
 .file-btn {
@@ -61,6 +62,7 @@ textarea {
     border: none;
     border-radius: 0.3rem;
     padding: 0.5rem 1.1rem 0.5rem 1.1rem;
+    float: left;
 }
 
 .predict-btn {
@@ -70,6 +72,7 @@ textarea {
     padding: 0.5rem 1.1rem 0.5rem 1.1rem;
     border-radius: 0.3rem;
     border: none;
+    float: right;
 }
 
 .right-div {
