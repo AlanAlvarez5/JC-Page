@@ -30,7 +30,7 @@
                     <textarea id="data" name="data" cols="100" rows="50"></textarea>
                     <div>
                         <input type="file" id="file_u" name="file_u" value="Subir Archivo" requiered>
-                        <input type="submit" name="prediction" value="Predecir">
+                        <input type="submit" name="prediction" value="Predecir" class="predict-btn">
                     </div>
                 </div>
                 <!-- <input type="submit" name="prediction_file" value="Predecir Archivo"> -->
@@ -40,20 +40,20 @@
         <!-- Segunda tarjeta Resultados -->
         <div class="right-div">
             <h1>Predicciones</h1>
-            <div>
-                <div>
+            <div class="gender-age-container">
+                <div class="gender">
                     <img src="../../static/genero.png" alt="genders">
                     <p>Género</p> 
-                    <p>{{result[0]}}</p>
+                    <p class="result">{{result[0]}}</p>
                     <p>Probabilidad de Género</p> 
-                    <p>{{result[1]}}%</p>
+                    <p class="porcentage">{{result[1]}}%</p>
                 </div>
-                <div>
+                <div class="age">
                     <img src="../../static/generaciones.png" alt="age">
                     <p>Edad</p> 
-                    <p>{{result[2]}}</p>
+                    <p class="result">{{result[2]}}</p>
                     <p>Probabilidad de Edad</p> 
-                    <p>{{result[3]}}%</p>
+                    <p class="porcentage">{{result[3]}}%</p>
                 </div>
             </div>
         </div>   
