@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" type="text/css" href="/static/prediction.css"> -->
+    </head>
+    <body>
+        <header>
+                <img src="/static/inegi.jpg" alt="logo_inegi">
+                <img src="/static/conacyt.png" alt="conacyt_logo">
+                <img src="/static/ug.png" alt="ug_logo">
+        </header>
+
+        <div>
+            <!-- <p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                    {% endwith %}
+            </p> -->
+
+            <form method="POST" action="{{ url_for('display_result') }}" enctype="multipart/form-data">
+
+                <div>
+                    <h1>Ingrese Texto o Seleccione un Archivo</h1>
+                    <div>
+                        <textarea id="data_1" name="data_1" cols="100" rows="50"></textarea>
+                        <div>
+                            <input type="file" id="file_1" name="file_1" value="Subir Archivo" requiered>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Ingrese Texto o Seleccione un Archivo</h1>
+                    <div>
+                        <textarea id="data_2" name="data_2" cols="100" rows="50"></textarea>
+                        <div>
+                            <input type="file" id="file_2" name="file_2" value="Subir Archivo" requiered>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Ingrese Texto o Seleccione un Archivo</h1>
+                    <div>
+                        <textarea id="data_3" name="data_3" cols="100" rows="50"></textarea>
+                        <div>
+                            <input type="file" id="file_3" name="file_3" value="Subir Archivo" requiered>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Ingrese Texto o Seleccione un Archivo</h1>
+                    <div>
+                        <textarea id="data_4" name="data_4" cols="100" rows="50"></textarea>
+                        <div>
+                            <input type="file" id="file_4" name="file_4" value="Subir Archivo" requiered>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <input type="submit" name="prediction_file" value="Predecir Archivo"> -->
+
+                <input type="submit" name="similitud" value="Similitud">
+            </form>
+        </div>
+
+        <div>
+            
+            <h1>Tabla de Similitud</h1>
+
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Usuario 1</th>
+                    <th>Usuario 2</th>
+                    <th>Usuario 3</th>
+                    <th>Usuario 4</th>
+                </tr>
+                <tr>
+                    <th>Usuario 1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Usuario 2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Usuario 3</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Usuario 4</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>   
+    </body>
+</html>

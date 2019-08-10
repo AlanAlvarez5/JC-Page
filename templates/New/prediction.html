@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" type="text/css" href="/static/design.css"> -->
+    </head>
+    <body>
+        <header>
+                <img src="/static/inegi.jpg" alt="logo_inegi">
+                <img src="/static/conacyt.png" alt="conacyt_logo">
+                <img src="/static/ug.png" alt="ug_logo">
+        </header>
+
+        <!-- Primer tarjeta "Ingrese texto o seleccione un archivo" -->
+        <div>
+            <h1>Ingrese Texto o Seleccione un Archivo</h1>
+            <!-- <p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                    {% endwith %}
+            </p> -->
+
+            <form method="POST" action="{{ url_for('display_result') }}" enctype="multipart/form-data">
+                <div>
+                    <textarea id="data" name="data" cols="100" rows="50"></textarea>
+                    <div>
+                        <input type="file" id="file_u" name="file_u" value="Subir Archivo" requiered>
+                        <input type="submit" name="prediction" value="Predecir">
+                    </div>
+                </div>
+                <!-- <input type="submit" name="prediction_file" value="Predecir Archivo"> -->
+            </form>
+        </div>
+
+        <!-- Segunda tarjeta Resultados -->
+        <div>
+            <h1>Predicciones</h1>
+            <div>
+                <div>
+                    <img src="/static/genero.png" alt="genders">
+                    <p>Género</p> 
+                    <p>{{result[0]}}</p>
+                    <p>Probabilidad de Género</p> 
+                    <p>{{result[1]}}%</p>
+                </div>
+                <div>
+                    <img src="/static/generaciones.png" alt="age">
+                    <p>Edad</p> 
+                    <p>{{result[2]}}</p>
+                    <p>Probabilidad de Edad</p> 
+                    <p>{{result[3]}}%</p>
+                </div>
+            </div>
+        </div>   
+    </body>
+</html>
