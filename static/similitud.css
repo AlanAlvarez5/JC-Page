@@ -2,9 +2,9 @@ body {
     margin: 0;
     background: linear-gradient(white,#F6F9FB,#B9D1E4,#8AB2D1,#6399C2,#4686B7, #2F76AE,#1967A5, #00569B);    
     font-family: 'Helvetica Neue','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 2rem 4rem 2rem 4rem;
+    padding: 2rem 4rem 4rem 4rem;
     margin: 0;
-    height: 100%;
+    height: 100vh;
 }
 
 header {
@@ -23,17 +23,11 @@ header img:nth-child(3) {
     float: right;
 }
 
-.sections {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
-}
 
 .tarjetas{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4rem;
+
 }
 
 .left-div {
@@ -111,6 +105,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 4rem;
     margin-bottom: 1rem;
 }
 
@@ -131,9 +126,9 @@ textarea {
 .regresar{
     display: flex;
     justify-content: center;
-    margin-top: 2.5rem;
 
 }
 .regresar img{
+    margin-top: 2.5rem;
     width: 3rem;
 }
