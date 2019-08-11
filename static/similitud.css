@@ -131,7 +131,7 @@ textarea {
 .regresar{
     display: flex;
     justify-content: center;
-    margin: 2.5rem;
+    margin-top: 2.5rem;
 
 }
 .regresar img{
