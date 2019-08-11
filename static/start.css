@@ -23,10 +23,33 @@ header img:nth-child(3) {
     float: right;
 }
 
-.bienvenida{
+h1{
     margin: auto;
     font-size: 38pt;
     color: #C3A130;
     padding-top: 60px;
     text-align: center;
+}
+
+h2{
+    margin: auto;
+    font-size: 30pt;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.button-container{
+    margin: auto;
+    padding-top: 20px;
+    align-items: center;
+    text-align: center;
+
+}
+
+button{
+    
+    font-size: 30pt;
+    color: white;
+    
 }
