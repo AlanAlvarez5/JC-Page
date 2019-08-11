@@ -4,7 +4,7 @@ body {
     font-family: 'Helvetica Neue','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 2rem 4rem 2rem 4rem;
     margin: 0;
-    height: 100vh;
+    height: 105vh;
 }
 
 header {
@@ -126,4 +126,13 @@ textarea {
     border: none;
     float: right;
     width: 15rem;
+}
+
+.regresar{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+.regresar img{
+    width: 3rem;
 }
