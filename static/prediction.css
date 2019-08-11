@@ -83,6 +83,14 @@ textarea {
     text-align: center;
     width: 100%;
     max-height: 100%;
+    border-color: #D1A71C;
+    border-width: 1rem;
+    border-style: solid;
+}
+
+.predictions {
+    background-color: #D1A71C;
+    width: 100%;
 }
 
 .right-div img {
