@@ -154,9 +154,9 @@ textarea {
 .regresar {
     grid-area: regresar;
     justify-self: center;
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 
 .regresar img {
-    width: 4rem;
+    width: 3rem;
 }
