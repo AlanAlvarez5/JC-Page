@@ -23,6 +23,18 @@ header img:nth-child(3) {
     float: right;
 }
 
+header a {
+    height: 4rem;
+}
+
+header a:nth-child(2) {
+    padding-left: 2rem;
+}
+
+header a:nth-child(3) {
+    float: right;
+}
+
 .sections {
     margin-top: 1rem;
     display: grid;
