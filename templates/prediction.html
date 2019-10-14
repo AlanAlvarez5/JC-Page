@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/static/prediction.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../static/prediction.css">
     </head>
     <body>
-        <h1>Please type data or upload a file:</h1>
-        <p>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                <ul class=flashes>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-                </ul>
-                {% endif %}
-            {% endwith %}
-        </p>
-        <form method="POST" action="{{ url_for('display_result') }}" enctype="multipart/form-data">
-            <div class="center">
+        <header>
+            <a title="INEGI" href="https://www.inegi.org.mx/"><img src="../../static/inegi.jpg" alt="logo_inegi"></a>
+            <a title="CONACYT" href="https://www.conacyt.gob.mx/"><img src="../../static/conacyt.png" alt="conacyt_logo"></a>
+            <a title="UG" href="http://www.ugto.mx"><img src="../../static/ug.png" alt="ug_logo"></a>
+        </header>
+        <div class="sections">
+            <!-- Primer tarjeta "Ingrese texto o seleccione un archivo" -->
+            <div class="left-div">
+            <h1>Ingrese Texto o Seleccione un Archivo</h1>
+            <!-- <p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                    {% endwith %}
+            </p> -->
 
-                <textarea id="data" name="data" cols="100" rows="50"></textarea>
-                <br/>
-                <div class="buttons">
-                    <input class="file" type="file" id="file_u" name="file_u" value="Upload a file to predict" requiered>
-                    <input type="submit" name="prediction" value="Predict text">
-                    <input class="predict" type="submit" name="prediction_file" value="Predict file">
+            <form method="POST" action="{{ url_for('display_result') }}" enctype="multipart/form-data">
+                <div>
+                    <textarea id="data" name="data" cols="100" rows="50"></textarea>
+                    <div class="buttons-container">
+                        <input type="file" id="file_u" name="file_u" value="Subir Archivo" requiered
+                        class="file-btn">
+                        <input type="submit" name="prediction" value="Predecir" class="predict-btn">
+                    </div>
+                </div>
+                <!-- <input type="submit" name="prediction_file" value="Predecir Archivo"> -->
+            </form>
+        </div>
+
+        <!-- Segunda tarjeta Resultados -->
+        <div class="right-div">
+            <div class="predictions">
+                <h1>Predicciones</h1>
+            </div>
+            <div class="gender-age-container">
+                <div class="gender">
+                    <img src="../../static/genero.png" alt="genders">
+                    <p>Género</p> 
+                    <p class="result">{{result[0]}}</p>
+                    <p>Probabilidad de Género</p> 
+                    <p class="porcentage">{{result[1]}}%</p>
+                </div>
+                <div class="age">
+                    <img src="../../static/generaciones.png" alt="age">
+                    <p>Edad</p> 
+                    <p class="result">{{result[2]}}</p>
+                    <p>Probabilidad de Edad</p> 
+                    <p class="porcentage">{{result[3]}}%</p>
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="regresar">
+                <a href="./start.html">
+                    <img src="../../static/back.png" alt="back">
+                </a>
+        </div> 
+        </div>
     </body>
 </html>
-
