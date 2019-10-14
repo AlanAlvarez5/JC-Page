@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../static/newSection.css">
+    </head>
+    <body>
+        <header>
+            <a title="INEGI" href="https://www.inegi.org.mx/"><img src="../../static/inegi.jpg" alt="logo_inegi"></a>
+            <a title="CONACYT" href="https://www.conacyt.gob.mx/"><img src="../../static/conacyt.png" alt="conacyt_logo"></a>
+            <a title="UG" href="http://www.ugto.mx"><img src="../../static/ug.png" alt="ug_logo"></a>
+        </header>
+        <div class="sections">
+            <!-- Primer tarjeta "Ingrese texto o seleccione un archivo" -->
+            <div class="left-div">
+            <h1>Seleccione Una Carpeta con Imagenes</h1>
+            <!-- <p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                    {% endwith %}
+            </p> -->
+
+            <form method="POST" action="{{ url_for('display_result') }}" enctype="multipart/form-data">
+                <div>
+                    <div class="buttons-container">
+                        <input webkitdirectory mozdirectory msdirectory odirectory directory type="file" id="directory_u" name="directory_u" value="Subir Carpeta" requiered
+                        class="file-btn">
+                        <input type="submit" name="newSection" value="Predecir" class="predict-btn">
+                    </div>
+                </div>
+                <!-- <input type="submit" name="prediction_file" value="Predecir Archivo"> -->
+            </form>
+
+            <div class="images">
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+                <div class="imagen">
+                    <img src="../static/genero.png" alt="imagen">
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda tarjeta Resultados -->
+        <div class="right-div">
+            <div class="predictions">
+                <h1>Predicciones</h1>
+            </div>
+            <div class="gender-age-container">
+                <div class="gender">
+                    <img src="../../static/genero.png" alt="genders">
+                    <p>Género</p> 
+                    <p class="result">{{result[0]}}</p>
+                    <p>Probabilidad de Género</p> 
+                    <p class="porcentage">{{result[1]}}%</p>
+                </div>
+                <div class="age">
+                    <img src="../../static/generaciones.png" alt="age">
+                    <p>Edad</p> 
+                    <p class="result">{{result[2]}}</p>
+                    <p>Probabilidad de Edad</p> 
+                    <p class="porcentage">{{result[3]}}%</p>
+                </div>
+            </div>
+        </div>
+        <div class="regresar">
+                <a href="./prediction_menu.html">
+                    <img src="../../static/back.png" alt="back">
+                </a>
+        </div> 
+        </div>
+    </body>
+</html>
