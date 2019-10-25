@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" type="text/css" href="/static/prediction.css"> -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../static/newSection2.css">
+    </head>
+    <body>
+        <header>
+            <a title="INEGI" href="https://www.inegi.org.mx/"><img src="../../static/inegi.jpg" alt="logo_inegi"></a>
+            <a title="CONACYT" href="https://www.conacyt.gob.mx/"><img src="../../static/conacyt.png" alt="conacyt_logo"></a>
+            <a title="UG" href="http://www.ugto.mx"><img src="../../static/ug.png" alt="ug_logo"></a>
+        </header>
+            <!-- <p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                    {% endwith %}
+            </p> -->
+            
+        <form method="POST" action="{{ url_for('display_result') }}" enctype="multipart/form-data">
+            <div class="tarjetas">
+
+                <div class="left-div">
+                    <h1>Seleccione una Carpeta de imagenes</h1>
+                    <div>
+                        <div class="buttons-container">
+                            <input webkitdirectory mozdirectory msdirectory odirectory directory  type="file" id="file_1" name="file_1" value="Subir Archivo" requiered class="file-btn">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="left-div">
+                    <h1>Seleccione una Carpeta de imagenes</h1>
+                    <div>
+                        <div>
+                            <input webkitdirectory mozdirectory msdirectory odirectory directory  type="file" id="file_2" name="file_2" value="Subir Archivo" requiered class="file-btn">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="left-div">
+                    <h1>Seleccione una Carpeta de imagenes</h1>
+                    <div>
+                        <div>
+                            <input webkitdirectory mozdirectory msdirectory odirectory directory  type="file" id="file_3" name="file_3" value="Subir Archivo" requiered class="file-btn">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="left-div">
+                    <h1>Seleccione una Carpeta de imagenes</h1>
+                    <div>
+                        <div>
+                            <input  webkitdirectory mozdirectory msdirectory odirectory directory type="file" id="file_4" name="file_4" value="Subir Archivo" requiered class="file-btn">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <input type="submit" name="prediction_file" value="Predecir Archivo"> -->
+                
+            </div>
+            <div class="submit">
+                <input type="submit" name="similitud" value="Similitud" class="compare-btn">
+            </div>
+        </form>
+            
+        <div class="card-table">
+            <div class=table>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="titulo">Tabla de Similitud</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>  </td>
+                        <td>Usuario 1</td>
+                        <td>Usuario 2</td>
+                        <td>Usuario 3</td>
+                        <td>Usuario 4</td>
+                    </tr>
+                    <tr>
+                        <td>Usuario 1</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                    </tr>
+                    <tr>
+                        <td>Usuario 2</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                    </tr>
+                    <tr>
+                        <td>Usuario 3</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                    </tr>
+                    <tr>
+                        <td>Usuario 4</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                        <td style=" color: #2E8400">87%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="regresar">
+                    <a href="./img_menu.html">
+                        <img src="../../static/back.png" alt="back">
+                    </a>
+                </div>
+        </div>   
+        
+
+        </body>
+    </body>
+</html>
